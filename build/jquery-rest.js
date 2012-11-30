@@ -16,6 +16,13 @@
         type: 'put'
       }), defaults);
     },
+    postJSON: function(url, data, options) {
+      return $.ajax($.extend(options, {
+        url: url,
+        data: JSON.stringify(data),
+        type: 'post'
+      }), defaults);
+    },
     deleteJSON: function(url, options) {
       return $.ajax($.extend(options, {
         url: url,

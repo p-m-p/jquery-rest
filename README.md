@@ -13,6 +13,17 @@ $.putJSON(
     }
 );
 
+// short hand for POST requests $.postJSON(url, data, options)
+$.postJSON(
+    'http://restapi.com/page/' // API endpoint
+  , {title: 'My new page'}, // POST data (sent as JSON)
+  , { // Any other $.ajax options you need to add
+      success: function (data) {
+        console.log(data); // JSON response data
+      }
+    }
+);
+
 // short hand for DELETE requests $.deleteJSON(url, options)
 $.deleteJSON(
     'http://restapi.com/page/' // API endpoint
